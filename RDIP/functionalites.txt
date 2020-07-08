@@ -1,0 +1,8 @@
+Functionalities:
+
+DropDown
+Buttons for jumbled words
+Reform sentence button
+Correctness button
+display-right or wrong
+hide and show functionalities
