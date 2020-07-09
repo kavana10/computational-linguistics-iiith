@@ -107,6 +107,30 @@ var h7 = ['एक बड़ी सी किताब वहाँ है',
                 
 
  var hindiArray = [h1,h2,h3,h4,h5,h6,h7];
+let selection = document.getElementById("choose");
+function run(){
+if (selection.value === "english"){
+                document.getElementById("s2").innerHTML = "(select the buttons in proper order)"
+                document.getElementById("s1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
+            
+
+                
+}
+else if (selection.value === "hindi"){
+                document.getElementById("s2").innerHTML = "(select the buttons in proper order)"
+                document.getElementById("s1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
+              
+
+                
+}
+else {
+                document.getElementById("s2").innerHTML = ""
+                document.getElementById("s1").innerHTML = ""
+                
+                alert("Choose any language")
+            }
+}
+          
 
  
 
