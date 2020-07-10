@@ -18,7 +18,10 @@ var hin = [["राम और श्याम बाजार गयें","र
 ["एक बड़ी सी किताब वहाँ है","एक बड़ी सी किताब है वहाँ","बड़ी सी एक किताब वहाँ है","बड़ी सी एक किताब है वहाँ","वहाँ है एक बड़ी सी किताब","वहाँ है बड़ी सी एक किताब","है वहाँ एक बड़ी सी किताब","है वहाँ बड़ी सी एक किताब"]];
 
 
+//shuffling words of the sentence
 
+var cc;
+var bc;
 function shuffle(jumbled){
 	var jumble = jumbled.split(" ");
 	var i = jumble.length, temp, randomi;
@@ -40,8 +43,14 @@ function fs(id,value){
 	 document.getElementById("s5").innerHTML = finalsentence;
 	document.getElementById(id).style.display = "none";
 	document.getElementById("s6").innerHTML = "<center><button id='reform' onclick='rs()'>Re-form the sentence</button></center>"
+    cc++;
+    if(bc==cc){
+		document.getElementById("s7").innerHTML = "<center><button id='correctness'  onclick='cs()'>Check the correctness</button></center>"
+    }
+    
 }
 
+//reset option
 function rs(){
 	
 	finalsentence = "";
@@ -62,13 +71,15 @@ if (selection.value === "english"){
 var r = Math.floor(Math.random()* eng.length);
 		var jumbled = eng[r][0];
 		var j = shuffle(jumbled);
-		
+		bc=0;
+    cc=0;
 		var bu ="";
 		var fbu = "";
 		for(i=0;i<=j.length-1;i++){
 			val = j[i];
 			bu = "  <button id='btn"+i+"'onclick='fs(this.id,this.value)' value='"+val+"'>"+val+"</button>  ";
 			fbu +=bu;
+            bc++
            
 		}
 		s3.innerHTML = fbu.trim();
@@ -81,13 +92,15 @@ else if (selection.value === "hindi"){
               var r = Math.floor(Math.random()* hin.length);
 		var jumbled = hin[r][0];
 		var j = shuffle(jumbled);
-		
+		 bc=0;
+    cc=0;
 		var bu ="";
 		var fbu = "";
 		for(i=0;i<=j.length-1;i++){
 			val = j[i];
 			bu = "  <button id='btn"+i+"'onclick='fs(this.id,this.value)' value='"+val+"'>"+val+"</button>  ";
 			fbu +=bu;
+            bc++;
 		}
 		s3.innerHTML = fbu.trim();
 	}
