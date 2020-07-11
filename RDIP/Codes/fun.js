@@ -25,6 +25,7 @@ var newArray= ["राम और श्याम बाजार गयें","
 var cc;
 var bc,r;
 var answers="";
+var j;
 let selection = document.getElementById("choose");
 
 //comparing
@@ -60,7 +61,7 @@ if (selection.value=='english'){
 		}
 		document.getElementById("correctans").innerHTML = answers;
 	}
-    else if(x=='hindi'){
+    else if(selection.value=='hindi'){
 		totalanswers = hin[r].length-1;
 		document.getElementById('s10').innerHTML = "<center><button id='showansbtn' onclick='hs()'>hide correct answer</button></center>"
 		for(i=0;i<=totalanswers;i++){
@@ -83,6 +84,7 @@ function toggle(){
     while(document.getElementById("correctans").innerHTML ==""){
 	
 		document.getElementById('s10').innerHTML = "<center><button id='showansbtn' onclick='hs()'>hide correct answer</button></center>"
+        document.getElementById("correctans").innerHTML = answers;
 	}
 }
 
@@ -117,11 +119,19 @@ function fs(id,value){
 
 //reset option
 function rs(){
-  
+    for(i=0;i<=j.length-1;i++){
+		document.getElementById('btn'+i).style.display = "";
+	}
+  finalsentence = "";
+    
 	document.getElementById("s5").innerHTML = "";
-		
+		document.getElementById("correctans").innerHTML = "";
+    document.getElementById("s7").innerHTML="";
     document.getElementById("s6").innerHTML ="";
+    document.getElementById('s10').innerHTML="";
 	document.getElementById("s4").innerHTML = "";
+    document.getElementById("s8").innerHTML = "";
+    document.getElementById("s9").innerHTML = "";
     cc=0;
 }
 
@@ -134,13 +144,22 @@ if (selection.value === "english"){
     
                 answers="";
                 document.getElementById("correctans").innerHTML = ""
+                
+                finalsentence = "";
+                document.getElementById("s4").innerHTML = "";
+    document.getElementById("s5").innerHTML = "";
+    document.getElementById("s6").innerHTML = "";
+    document.getElementById("s7").innerHTML = "";
+    document.getElementById("s8").innerHTML = "";
+    document.getElementById("s9").innerHTML = "";
+    document.getElementById("s10").innerHTML = "";
     
                 document.getElementById("s2").innerHTML = "(select the buttons in proper order)"
                 document.getElementById("s1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
             
  r = Math.floor(Math.random()* eng.length);
 		var jumbled = eng[r][0];
-		var j = shuffle(jumbled);
+		j = shuffle(jumbled);
 		bc=0;
     cc=0;
 		var bu ="";
@@ -160,11 +179,21 @@ else if (selection.value === "hindi"){
                 answers="";
                 document.getElementById("correctans").innerHTML = ""
     
+                finalsentence = "";
+    document.getElementById("s4").innerHTML = "";
+    document.getElementById("s5").innerHTML = "";
+    document.getElementById("s6").innerHTML = "";
+    document.getElementById("s7").innerHTML = "";
+    document.getElementById("s8").innerHTML = "";
+    document.getElementById("s9").innerHTML = "";
+    document.getElementById("s10").innerHTML = "";
+    
+    
                 document.getElementById("s2").innerHTML = "(select the buttons in proper order)"
                 document.getElementById("s1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
                r = Math.floor(Math.random()* hin.length);
 		var jumbled = hin[r][0];
-		var j = shuffle(jumbled);
+		 j = shuffle(jumbled);
 		 bc=0;
     cc=0;
 		var bu ="";
@@ -178,12 +207,22 @@ else if (selection.value === "hindi"){
 		s3.innerHTML = fbu.trim();
 	}
 
-else if (selection.value === "Select Language"){
-                alert("Choose any language")
-                document.getElementById("s2").innerHTML = ""
-                document.getElementById("s1").innerHTML = ""
-                document.getElementById("s3").innerHTML = ""
-                document.getElementById("s4").innerHTML = ""
-               
+else if (selection.value === "default"){
+       
+                   answers="";
+                document.getElementById("correctans").innerHTML = ""
+                
+                finalsentence = "";
+              document.getElementById("s1").innerHTML = "";
+    document.getElementById("s2").innerHTML = "";
+    document.getElementById("s3").innerHTML = "";
+                document.getElementById("s4").innerHTML = "";
+    document.getElementById("s5").innerHTML = "";
+    document.getElementById("s6").innerHTML = "";
+    document.getElementById("s7").innerHTML = "";
+    document.getElementById("s8").innerHTML = "";
+    document.getElementById("s9").innerHTML = "";
+    document.getElementById("s10").innerHTML = "";
+    
             }
 }

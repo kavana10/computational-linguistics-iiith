@@ -95,7 +95,7 @@
      
      position: absolute;
     width: 900px;
-    top: 56%;
+    top: 58%;
     left: 80%;
     transform: translate(-50%, -50%);
     font-size: 20px;
@@ -135,12 +135,12 @@
     
    position: absolute;
     width: 900px;
-    top: 78%;
+    top: 82%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: darkblue;
-    font-style: italic;
+    font-size: 15px;
+    color: black;
+   
      
 }
 
