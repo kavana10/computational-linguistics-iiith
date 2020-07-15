@@ -1,4 +1,7 @@
 
+
+
+
 corpus1=["A mouse was having a very bad time. She could find no food at all. She looked here and there, but there was no food, and she grew very thin. At last the mouse found a basket, full of corn. There was a small hole in the basket, and she crept in. She could just get through the hole. Then she began to eat the corn. Being very hungry, she ate a great deal, and went on eating and eating. She had grown very fat before she felt that she had had enough. When the mouse tried to climb out of the basket, she could not. She was too fat to pass through the hole. 'How shall I climb out?' said the mouse. 'oh, how shall I climb out?' Just then a rat came along, and he heard the mouse. 'Mouse,' said the rat, 'if you want to climb out of the basket, you must wait till you have grown as thin as you were when you went in.'"];
 
 corpus2=["A wolf carried off a lamb. The lamb said, 'I know you are going to eat me, but before you eat me I would like to hear you play the flute. I have heard that you can play the flute better than anyone else, even the shepherd himself.' The wolf was so pleased at this that he took out his flute and began to play. When he had done, the lamb insisted him to play once more and the wolf played again. The shepherd and the dogs heard the sound, and they came running up and fell on the wolf and the lamb was able to get back to the flock."]
@@ -56,6 +59,23 @@ else if(selection.value ==='Corpus3'){
 	}
 }
 
+
+
+
+
+function c(){
+    
+    document.getElementById('s8').innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types";
+	document.getElementById("s6").innerHTML="";
+    document.getElementById("s5").innerHTML="";
+    document.getElementById("s7").innerHTML="";
+    document.getElementById('s9').innerHTML="#New types:";
+	document.getElementById('s10').innerHTML="<input id='newtype' type=text>";
+	
+    
+}
+
+
 function check(){
     
     var w=para;
@@ -88,7 +108,7 @@ function check(){
 	}
 	if((wc == tokens) && (uc == types)){
 		document.getElementById("s5").innerHTML= "<center><font color='Green' style = 'font-size:20px'>Right answer</font></center>"
-         document.getElementById("s7").innerHTML = "<button  onclick='continue()'>Continue</button>";
+         document.getElementById("s7").innerHTML = "<button  onclick='c()'>Continue</button>";
 	}
 	else{
 		document.getElementById("s6").innerHTML = "<center><font color='Red' style = 'font-size:20px'>Wrong answer</font></center>"
