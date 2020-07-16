@@ -92,8 +92,21 @@ str=str.replace(/[^a-zA-Z ]/g, "");
     
     s = new Set(s);
 	s = Array.from(s);
-    console.log(s);
-    alert(s.length);
+    console.log(s.length);
+   
+    
+    let val = document.getElementById("newtype").value;
+    //comparisons
+    
+    if(val == s.length){
+        document.getElementById("s12").innerHTML = "<center><font color='Green' style = 'font-size:20px'>Right answer</font></center>"
+         document.getElementById("newtype").style.backgroundColor =  "Green"
+        
+    }
+    else{
+        document.getElementById("s12").innerHTML ="<center><font color='Red' style = 'font-size:20px'>Wrong answer</font></center>"
+        document.getElementById("newtype").style.backgroundColor = "Red"
+    }
 	
     
     
