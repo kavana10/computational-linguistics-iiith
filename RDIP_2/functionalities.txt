@@ -1,0 +1,8 @@
+Unit5 Functionalities:
+
+  
+1. languages selection
+2. sentence selection
+3. Selection of POS 
+4. Submit
+5. Hide and get answer
