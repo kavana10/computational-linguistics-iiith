@@ -1,0 +1,11 @@
+#choose {
+    padding: 2px;
+    border: 1px solid black;
+    width: 180px;
+    font-size: 20px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
